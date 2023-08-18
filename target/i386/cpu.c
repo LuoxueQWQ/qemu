@@ -2234,7 +2234,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_SVM] =
             CPUID_SVM_NPT,
         .xlevel = 0x8000001A,
-        .model_id = "AMD Phenom(tm) 9550 Quad-Core Processor"
+        .model_id = "AMD Phenom(tm) X4 9550 2.2 GHz"
     },
     {
         .name = "core2duo",
@@ -2364,7 +2364,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .model_id = "Common 32-bit KVM processor"
     },
     {
-        .name = "coreduo",
+        .name = "Gen_Intel_T2600",
         .level = 10,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2397,7 +2397,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .model_id = "Genuine Intel(R) CPU           T2600  @ 2.16GHz",
     },
     {
-        .name = "486",
+        .name = "Intel_80486",
         .level = 1,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 4,
@@ -2406,10 +2406,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_1_EDX] =
             I486_FEATURES,
         .xlevel = 0,
-        .model_id = "",
+        .model_id = "Intel(R) 80486",
     },
     {
-        .name = "pentium",
+        .name = "Intel_Pentium",
         .level = 1,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 5,
@@ -2418,10 +2418,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_1_EDX] =
             PENTIUM_FEATURES,
         .xlevel = 0,
-        .model_id = "",
+        .model_id = "Intel(R) Pentium ",
     },
     {
-        .name = "pentium2",
+        .name = "Intel_Pentiumii",
         .level = 2,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2430,10 +2430,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_1_EDX] =
             PENTIUM2_FEATURES,
         .xlevel = 0,
-        .model_id = "",
+        .model_id = "Intel(R) Pentiumii",
     },
     {
-        .name = "pentium3",
+        .name = "Intel_Pentiumiii",
         .level = 3,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2442,7 +2442,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_1_EDX] =
             PENTIUM3_FEATURES,
         .xlevel = 0,
-        .model_id = "",
+        .model_id = "Intel(R) Pentiumiii",
     },
     {
         .name = "athlon",
@@ -2457,10 +2457,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_8000_0001_EDX] =
             CPUID_EXT2_MMXEXT | CPUID_EXT2_3DNOW | CPUID_EXT2_3DNOWEXT,
         .xlevel = 0x80000008,
-        .model_id = "QEMU Virtual CPU version " QEMU_HW_VERSION,
+        .model_id = "AMD Athlon TM 950" QEMU_HW_VERSION,
     },
     {
-        .name = "n270",
+        .name = "Intel_Atom_N270",
         .level = 10,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2485,7 +2485,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .model_id = "Intel(R) Atom(TM) CPU N270   @ 1.60GHz",
     },
     {
-        .name = "Conroe",
+        .name = "Intel_Celeron_Processor",
         .level = 10,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2522,10 +2522,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_VMX_SECONDARY_CTLS] =
              VMX_SECONDARY_EXEC_VIRTUALIZE_APIC_ACCESSES,
         .xlevel = 0x80000008,
-        .model_id = "Intel Celeron_4x0 (Conroe/Merom Class Core 2)",
+        .model_id = "Intel(R) Celeron(TM) Processor 2.40 GHz",
     },
     {
-        .name = "Penryn",
+        .name = "Intel_Core_2_Duo_P9500",
         .level = 10,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2566,10 +2566,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_VIRTUALIZE_APIC_ACCESSES |
              VMX_SECONDARY_EXEC_WBINVD_EXITING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Core 2 Duo P9xxx (Penryn Class Core 2)",
+        .model_id = "Intel(R) Core(TM)2 Duo Processor P9500",
     },
     {
-        .name = "Nehalem",
+        .name = "Intel_Core_i7_920",
         .level = 11,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2629,16 +2629,16 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_VIRTUALIZE_X2APIC_MODE |
              VMX_SECONDARY_EXEC_ENABLE_VPID,
         .xlevel = 0x80000008,
-        .model_id = "Intel Core i7 9xx (Nehalem Class Core i7)",
+        .model_id = "Intel(R) Core(TM) i7-920",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "Nehalem-IBRS",
+                .alias = "Intel_Core_i7_975_Extreme_Edition",
                 .props = (PropValue[]) {
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Core i7 9xx (Nehalem Core i7, IBRS update)" },
+                      "Intel(R) Core(TM) i7-975 Extreme Edition" },
                     { /* end of list */ }
                 }
             },
@@ -2646,7 +2646,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Westmere",
+        .name = "Intel_Xeon_X5680",
         .level = 11,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2710,16 +2710,16 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_VIRTUALIZE_X2APIC_MODE |
              VMX_SECONDARY_EXEC_ENABLE_VPID | VMX_SECONDARY_EXEC_UNRESTRICTED_GUEST,
         .xlevel = 0x80000008,
-        .model_id = "Westmere E56xx/L56xx/X56xx (Nehalem-C)",
+        .model_id = "Intel(R) Xeon(TM) X5680",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "Westmere-IBRS",
+                .alias = "Intel_Xeon_L5640",
                 .props = (PropValue[]) {
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Westmere E56xx/L56xx/X56xx (IBRS update)" },
+                      "Intel(R) Xeon(TM) L5640" },
                     { /* end of list */ }
                 }
             },
