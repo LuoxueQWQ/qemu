@@ -2727,7 +2727,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "SandyBridge",
+        .name = "Intel_Xeon_E3_1220",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2796,16 +2796,16 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_VIRTUALIZE_X2APIC_MODE |
              VMX_SECONDARY_EXEC_ENABLE_VPID | VMX_SECONDARY_EXEC_UNRESTRICTED_GUEST,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon E312xx (Sandy Bridge)",
+        .model_id = "Intel(R) Xeon(TM) E3-1220",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "SandyBridge-IBRS",
+                .alias = "Intel_Xeon_E3_1260L",
                 .props = (PropValue[]) {
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Xeon E312xx (Sandy Bridge, IBRS update)" },
+                      "Intel(R) Xeon(TM) E3-1260L" },
                     { /* end of list */ }
                 }
             },
@@ -2813,7 +2813,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "IvyBridge",
+        .name = "Intel_Xeon_E3_1230_v2",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2888,16 +2888,16 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_VIRTUAL_INTR_DELIVERY |
              VMX_SECONDARY_EXEC_RDRAND_EXITING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon E3-12xx v2 (Ivy Bridge)",
+        .model_id = "Intel(R) Xeon(TM) E3-1230 v2)",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "IvyBridge-IBRS",
+                .alias = "Intel_Xeon_E3_1290_v2",
                 .props = (PropValue[]) {
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Xeon E3-12xx v2 (Ivy Bridge, IBRS)" },
+                      "Intel(R) Xeon(TM) E3-1290 v2" },
                     { /* end of list */ }
                 }
             },
@@ -2905,7 +2905,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Haswell",
+        .name = "Intel_Core_i3_4350",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -2985,23 +2985,23 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_ENABLE_VMFUNC | VMX_SECONDARY_EXEC_SHADOW_VMCS,
         .features[FEAT_VMX_VMFUNC] = MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Core Processor (Haswell)",
+        .model_id = "Intel(R) Core(TM) i3-4350",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "Haswell-noTSX",
+                .alias = "Intel_Core_i5_4590",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
                     { "stepping", "1" },
-                    { "model-id", "Intel Core Processor (Haswell, no TSX)", },
+                    { "model-id", "Intel(R) Core(TM) i5-4590", },
                     { /* end of list */ }
                 },
             },
             {
                 .version = 3,
-                .alias = "Haswell-IBRS",
+                .alias = "Intel_Core_i7_4790",
                 .props = (PropValue[]) {
                     /* Restore TSX features removed by -v2 above */
                     { "hle", "on" },
@@ -3013,20 +3013,20 @@ static const X86CPUDefinition builtin_x86_defs[] = {
                     { "stepping", "4" },
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Core Processor (Haswell, IBRS)" },
+                      "Intel(R) Core(TM) i7-4790" },
                     { /* end of list */ }
                 }
             },
             {
                 .version = 4,
-                .alias = "Haswell-noTSX-IBRS",
+                .alias = "Intel_Core_i7_4930MX",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
                     /* spec-ctrl was already enabled by -v3 above */
                     { "stepping", "1" },
                     { "model-id",
-                      "Intel Core Processor (Haswell, no TSX, IBRS)" },
+                      "Intel(R) Core(TM) i7-4930MX" },
                     { /* end of list */ }
                 }
             },
@@ -3034,7 +3034,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Broadwell",
+        .name = "Intel_Core_M_5Y10a",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3116,41 +3116,41 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .features[FEAT_VMX_VMFUNC] = MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Core Processor (Broadwell)",
+        .model_id = "Intel(R) Core(TM) M-5Y10a",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "Broadwell-noTSX",
+                .alias = "Intel_Core_i3_5005U",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
-                    { "model-id", "Intel Core Processor (Broadwell, no TSX)", },
+                    { "model-id", "Intel(R) Core(TM) i3-5005U", },
                     { /* end of list */ }
                 },
             },
             {
                 .version = 3,
-                .alias = "Broadwell-IBRS",
+                .alias = "Intel_Core_i5_5675R",
                 .props = (PropValue[]) {
                     /* Restore TSX features removed by -v2 above */
                     { "hle", "on" },
                     { "rtm", "on" },
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Core Processor (Broadwell, IBRS)" },
+                      "Intel(R) Core(TM) i5-5675R" },
                     { /* end of list */ }
                 }
             },
             {
                 .version = 4,
-                .alias = "Broadwell-noTSX-IBRS",
+                .alias = "Intel_Core_i7_5950HQ",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
                     /* spec-ctrl was already enabled by -v3 above */
                     { "model-id",
-                      "Intel Core Processor (Broadwell, no TSX, IBRS)" },
+                      "Intel(R) Core(TM) i7-5950HQ" },
                     { /* end of list */ }
                 }
             },
@@ -3158,7 +3158,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Skylake-Client",
+        .name = "Intel_Core_i3_6300",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3240,27 +3240,27 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .features[FEAT_VMX_VMFUNC] = MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Core Processor (Skylake)",
+        .model_id = "Intel(R) Core(TM) i3-6300",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "Skylake-Client-IBRS",
+                .alias = "Intel_Core_i5_6500",
                 .props = (PropValue[]) {
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Core Processor (Skylake, IBRS)" },
+                      "Intel(R) Core(TM) i5-6500" },
                     { /* end of list */ }
                 }
             },
             {
                 .version = 3,
-                .alias = "Skylake-Client-noTSX-IBRS",
+                .alias = "Intel_Core_i9_7980XE",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
                     { "model-id",
-                      "Intel Core Processor (Skylake, IBRS, no TSX)" },
+                      "Intel(R) Core(TM) i9-7980XE" },
                     { /* end of list */ }
                 }
             },
@@ -3277,7 +3277,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Skylake-Server",
+        .name = "Intel_Xeon_E3_1240_v5",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3366,30 +3366,30 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_ENABLE_VMFUNC | VMX_SECONDARY_EXEC_SHADOW_VMCS |
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Processor (Skylake)",
+        .model_id = "Intel(R) Xeon(TM) E3-1240 v5",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "Skylake-Server-IBRS",
+                .alias = "Intel_Xeon_D-2183IT",
                 .props = (PropValue[]) {
                     /* clflushopt was not added to Skylake-Server-IBRS */
                     /* TODO: add -v3 including clflushopt */
                     { "clflushopt", "off" },
                     { "spec-ctrl", "on" },
                     { "model-id",
-                      "Intel Xeon Processor (Skylake, IBRS)" },
+                      "Intel(R) Xeon(TM) D-2183IT" },
                     { /* end of list */ }
                 }
             },
             {
                 .version = 3,
-                .alias = "Skylake-Server-noTSX-IBRS",
+                .alias = "Intel_Xeon_W_3175X",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
                     { "model-id",
-                      "Intel Xeon Processor (Skylake, IBRS, no TSX)" },
+                      "Intel(R) Xeon(TM) W-3175X" },
                     { /* end of list */ }
                 }
             },
@@ -3413,7 +3413,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Cascadelake-Server",
+        .name = "Intel_Xeon_Gold_5218",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3505,7 +3505,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_ENABLE_VMFUNC | VMX_SECONDARY_EXEC_SHADOW_VMCS |
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Processor (Cascadelake)",
+        .model_id = "Intel(R) Xeon(TM) Gold 5218",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             { .version = 2,
@@ -3520,7 +3520,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
               },
             },
             { .version = 3,
-              .alias = "Cascadelake-Server-noTSX",
+              .alias = "Intel_Xeon_Gold_5218_TSX",
               .note = "ARCH_CAPABILITIES, no TSX",
               .props = (PropValue[]) {
                   { "hle", "off" },
@@ -3547,7 +3547,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Cooperlake",
+        .name = "Intel_Xeon_Platinum_8360HL",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3647,7 +3647,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .features[FEAT_VMX_VMFUNC] = MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Processor (Cooperlake)",
+        .model_id = "Intel(R) Xeon(TM) Platinum 8360HL",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             { .version = 2,
@@ -3662,7 +3662,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "Icelake-Server",
+        .name = "Intel_Xeon_D_1747NTE",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3758,13 +3758,13 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_RDRAND_EXITING | VMX_SECONDARY_EXEC_ENABLE_INVPCID |
              VMX_SECONDARY_EXEC_ENABLE_VMFUNC | VMX_SECONDARY_EXEC_SHADOW_VMCS,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Processor (Icelake)",
+        .model_id = "Intel(R) Xeon(TM) D-1747NTE",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
                 .note = "no TSX",
-                .alias = "Icelake-Server-noTSX",
+                .alias = "Intel_Xeon_D_1747NTE_TSX",
                 .props = (PropValue[]) {
                     { "hle", "off" },
                     { "rtm", "off" },
@@ -3819,7 +3819,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "SapphireRapids",
+        .name = "Intel_Xeon_Platinum_8490H",
         .level = 0x20,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -3941,7 +3941,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_VMX_VMFUNC] =
             MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Processor (SapphireRapids)",
+        .model_id = "Intel(R) Xeon(TM) Platinum 8490H",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
@@ -3957,7 +3957,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "GraniteRapids",
+        .name = "Granite_Rapids_SP",
         .level = 0x20,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -4086,14 +4086,14 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_VMX_VMFUNC] =
             MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Processor (GraniteRapids)",
+        .model_id = "Genuine Intel(R) CPU 0000",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             { /* end of list */ },
         },
     },
     {
-        .name = "Denverton",
+        .name = "Intel_Atom_C3955",
         .level = 21,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -4178,7 +4178,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .features[FEAT_VMX_VMFUNC] = MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Atom Processor (Denverton)",
+        .model_id = "Intel(R) Atom(TM) Processor C3955",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
@@ -4203,7 +4203,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         },
     },
     {
-        .name = "Snowridge",
+        .name = "Intel_Atom_P5731",
         .level = 27,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -4311,14 +4311,14 @@ static const X86CPUDefinition builtin_x86_defs[] = {
              VMX_SECONDARY_EXEC_RDSEED_EXITING | VMX_SECONDARY_EXEC_ENABLE_PML,
         .features[FEAT_VMX_VMFUNC] = MSR_VMX_VMFUNC_EPT_SWITCHING,
         .xlevel = 0x80000008,
-        .model_id = "Intel Atom Processor (SnowRidge)",
+        .model_id = "Intel(R) Atom(TM) P5731",
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
                 .props = (PropValue[]) {
                     { "mpx", "off" },
-                    { "model-id", "Intel Atom Processor (Snowridge, no MPX)" },
+                    { "model-id", "Intel(R) Atom(TM) P5921B" },
                     { /* end of list */ },
                 },
             },
@@ -4344,7 +4344,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         },
     },
     {
-        .name = "KnightsMill",
+        .name = "Intel_Xeon_Phi_7295",
         .level = 0xd,
         .vendor = CPUID_VENDOR_INTEL,
         .family = 6,
@@ -4383,10 +4383,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_6_EAX] =
             CPUID_6_EAX_ARAT,
         .xlevel = 0x80000008,
-        .model_id = "Intel Xeon Phi Processor (Knights Mill)",
+        .model_id = "Intel(R) Xeon Phi(TM) 7295",
     },
     {
-        .name = "Opteron_G1",
+        .name = "AMD_Opteron_240_Series_Processor",
         .level = 5,
         .vendor = CPUID_VENDOR_AMD,
         .family = 15,
@@ -4403,10 +4403,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_8000_0001_EDX] =
             CPUID_EXT2_LM | CPUID_EXT2_NX | CPUID_EXT2_SYSCALL,
         .xlevel = 0x80000008,
-        .model_id = "AMD Opteron 240 (Gen 1 Class Opteron)",
+        .model_id = "AMD Opteron(TM) 240 Series Processor",
     },
     {
-        .name = "Opteron_G2",
+        .name = "AMD_Opteron_2220_Series_Processor",
         .level = 5,
         .vendor = CPUID_VENDOR_AMD,
         .family = 15,
@@ -4425,10 +4425,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_8000_0001_ECX] =
             CPUID_EXT3_SVM | CPUID_EXT3_LAHF_LM,
         .xlevel = 0x80000008,
-        .model_id = "AMD Opteron 22xx (Gen 2 Class Opteron)",
+        .model_id = "AMD Opteron(TM) 2220 Series Processor",
     },
     {
-        .name = "Opteron_G3",
+        .name = "AMD_Opteron_2356_Series_Processor",
         .level = 5,
         .vendor = CPUID_VENDOR_AMD,
         .family = 16,
@@ -4450,10 +4450,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
             CPUID_EXT3_MISALIGNSSE | CPUID_EXT3_SSE4A |
             CPUID_EXT3_ABM | CPUID_EXT3_SVM | CPUID_EXT3_LAHF_LM,
         .xlevel = 0x80000008,
-        .model_id = "AMD Opteron 23xx (Gen 3 Class Opteron)",
+        .model_id = "AMD Opteron(TM) 2356 Series Processor",
     },
     {
-        .name = "Opteron_G4",
+        .name = "AMD_Opteron_6272_Series_Processor",
         .level = 0xd,
         .vendor = CPUID_VENDOR_AMD,
         .family = 21,
@@ -4482,10 +4482,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
             CPUID_SVM_NPT | CPUID_SVM_NRIPSAVE,
         /* no xsaveopt! */
         .xlevel = 0x8000001A,
-        .model_id = "AMD Opteron 62xx class CPU",
+        .model_id = "AMD Opteron(TM) 6272 Series Processor",
     },
     {
-        .name = "Opteron_G5",
+        .name = "AMD_Opteron_6380_Series_Processor",
         .level = 0xd,
         .vendor = CPUID_VENDOR_AMD,
         .family = 21,
@@ -4514,10 +4514,10 @@ static const X86CPUDefinition builtin_x86_defs[] = {
             CPUID_SVM_NPT | CPUID_SVM_NRIPSAVE,
         /* no xsaveopt! */
         .xlevel = 0x8000001A,
-        .model_id = "AMD Opteron 63xx class CPU",
+        .model_id = "AMD Opteron(TM) 6380 Series Processor",
     },
     {
-        .name = "EPYC",
+        .name = "AMD_EPYC_7F32",
         .level = 0xd,
         .vendor = CPUID_VENDOR_AMD,
         .family = 23,
@@ -4557,17 +4557,17 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_SVM] =
             CPUID_SVM_NPT | CPUID_SVM_NRIPSAVE,
         .xlevel = 0x8000001E,
-        .model_id = "AMD EPYC Processor",
+        .model_id = "AMD EPYC 7F32 Processor",
         .cache_info = &epyc_cache_info,
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
             {
                 .version = 2,
-                .alias = "EPYC-IBPB",
+                .alias = "AMD_EPYC_7F72",
                 .props = (PropValue[]) {
                     { "ibpb", "on" },
                     { "model-id",
-                      "AMD EPYC Processor (with IBPB)" },
+                      "AMD EPYC 7F72 Processor" },
                     { /* end of list */ }
                 }
             },
@@ -4580,7 +4580,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
                     { "xsaveerptr", "on" },
                     { "xsaves", "on" },
                     { "model-id",
-                      "AMD EPYC Processor" },
+                      "AMD EPYC 7702 Processor" },
                     { /* end of list */ }
                 }
             },
@@ -4588,7 +4588,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
                 .version = 4,
                 .props = (PropValue[]) {
                     { "model-id",
-                      "AMD EPYC-v4 Processor" },
+                      "AMD EPYC 7702P Processor },
                     { /* end of list */ }
                 },
                 .cache_info = &epyc_v4_cache_info
@@ -4654,7 +4654,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "EPYC-Rome",
+        .name = "AMD_EPYC_7502",
         .level = 0xd,
         .vendor = CPUID_VENDOR_AMD,
         .family = 23,
@@ -4700,7 +4700,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_SVM] =
             CPUID_SVM_NPT | CPUID_SVM_NRIPSAVE,
         .xlevel = 0x8000001E,
-        .model_id = "AMD EPYC-Rome Processor",
+        .model_id = "AMD EPYC 7502 Processor",
         .cache_info = &epyc_rome_cache_info,
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
@@ -4716,7 +4716,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
                 .version = 3,
                 .props = (PropValue[]) {
                     { "model-id",
-                      "AMD EPYC-Rome-v3 Processor" },
+                      "AMD EPYC 7452 Processor" },
                     { /* end of list */ }
                 },
                 .cache_info = &epyc_rome_v3_cache_info
@@ -4726,7 +4726,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
                 .props = (PropValue[]) {
                     /* Erratum 1386 */
                     { "model-id",
-                      "AMD EPYC-Rome-v4 Processor (no XSAVES)" },
+                      "AMD EPYC 7352 Processor" },
                     { "xsaves", "off" },
                     { /* end of list */ }
                 },
@@ -4735,7 +4735,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "EPYC-Milan",
+        .name = "AMD_EPYC_7302",
         .level = 0xd,
         .vendor = CPUID_VENDOR_AMD,
         .family = 25,
@@ -4786,7 +4786,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         .features[FEAT_SVM] =
             CPUID_SVM_NPT | CPUID_SVM_NRIPSAVE | CPUID_SVM_SVME_ADDR_CHK,
         .xlevel = 0x8000001E,
-        .model_id = "AMD EPYC-Milan Processor",
+        .model_id = "AMD EPYC 7302 Processor",
         .cache_info = &epyc_milan_cache_info,
         .versions = (X86CPUVersionDefinition[]) {
             { .version = 1 },
@@ -4794,7 +4794,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
                 .version = 2,
                 .props = (PropValue[]) {
                     { "model-id",
-                      "AMD EPYC-Milan-v2 Processor" },
+                      "AMD EPYC 7272 Processor" },
                     { "vaes", "on" },
                     { "vpclmulqdq", "on" },
                     { "stibp-always-on", "on" },
@@ -4810,7 +4810,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
         }
     },
     {
-        .name = "EPYC-Genoa",
+        .name = "AMD_EPYC_Genoa_7F52",
         .level = 0xd,
         .vendor = CPUID_VENDOR_AMD,
         .family = 25,
@@ -4878,7 +4878,7 @@ static const X86CPUDefinition builtin_x86_defs[] = {
             CPUID_SVM_NPT | CPUID_SVM_NRIPSAVE | CPUID_SVM_VNMI |
             CPUID_SVM_SVME_ADDR_CHK,
         .xlevel = 0x80000022,
-        .model_id = "AMD EPYC-Genoa Processor",
+        .model_id = "AMD EPYC Genoa 7F52",
         .cache_info = &epyc_genoa_cache_info,
     },
 };
